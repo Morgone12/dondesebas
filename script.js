@@ -9,4 +9,4 @@ let Persona = {
     hobby: 'tocar guitarra',
 };
 
-console.log(Persona);
+console.log(document.getElementById("copyright"));
