@@ -95,6 +95,7 @@ img {
   padding: 0;
   margin: 10px 0;
   border: 1px solid red;
+  border-radius: 5%;
 }
 /* END HEADER */
 
@@ -106,6 +107,7 @@ img {
   height: 250px;
   width: 100%;
   margin-bottom: 15px;
+  margin-top: 15px;
   position: relative;
   border: 2px solid #3f0c1f;
   overflow: hidden;
@@ -135,6 +137,10 @@ img {
 #menu-tile {
   background-image: url(images/menu-tiles.jpg.jpg);
   background-position: center;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+  border-radius: 10%;
 }
 
 #specials-tile {
@@ -306,3 +312,53 @@ img {
   color: rgba(238, 39, 39, 0.945);
 }
 
+/*Menu html styles*/
+#main-content > section{
+  justify-content: center;
+}
+
+#main-content > h3 {
+  padding: 15px;
+}
+
+.menu-item-tile {
+  background-color: cyan;
+  margin: 10px;
+  border-radius: 15px;
+  width: 250px;
+  overflow:hidden ;
+  max-height: 350px;
+}
+
+ .menu-item-photo{
+  border-radius: 100%;
+}
+
+.menu-item-tile p {
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.menu-item-tile h3 {
+  justify-content: center;
+}
+
+.menu-item-detail {
+  font-style: italic;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.menu-item-detail p {
+  color: cyan;
+}
+
+ .price {
+  color:green
+}
+
+.menu-item-detail .menu-item-name {
+  font-size: 1.3em;
+}
