@@ -178,6 +178,14 @@ img {
   .navbar-brand span {
     font-size: 0.8em;
   }
+
+  .nav-link .domicilios{
+    width: 100px;
+  }
+  
+  .men, .info {
+    width: 55px;
+  }
 }
 
 /* Medium devices only */
@@ -188,6 +196,14 @@ img {
 
   .navbar-brand span {
     font-size: 0.7em;
+  }
+
+  .nav-link .domicilios{
+    width: 100px;
+  }
+  
+  .men, .info {
+    width: 55px;
   }
 }
 
@@ -361,7 +377,7 @@ img {
   color: cyan;
 }
 
-#price {
+.price {
   color: green;
   text-align: center;
   margin-right: 10px;
