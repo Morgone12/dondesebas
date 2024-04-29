@@ -47,10 +47,45 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 $(function () {
-  $("#collapsable-nav").on("focusout", function () {
+  $(".navbar-toggler").on("focusout", function () {
     let screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
+    if (screenWidth < 992) {
       $(".navbar-collapse").collapse("hide");
     }
   });
 });
+
+(function (global) {
+  let ds = {};
+  const homeHtml = "snippets/home-snippet.html";
+
+  let insertHtml = function (selector, html) {
+    let target = document.querySelector(selector);
+    target.innerHTML = html;
+  };
+  //Mandamos la peticion get para cargar dinamicamente en la página el contenido html en el selector
+  document.addEventListener("DOMContentLoaded", function () {
+    $ajaxUtils.sendGetRequest(
+      homeHtml,
+      function (responseText) {
+        document.querySelector("#main-content").innerHTML = responseText;
+      },
+      false
+    );
+  });
+
+  const menuHtml = "snippets/menu-snippet.html";
+
+  //Mandamos la peticion get para cargar dinamicamente en la página el contenido html en el selector
+  document.addEventListener("DOMContentLoaded", function () {
+    $ajaxUtils.sendGetRequest(
+      menuHtml,
+      function (responseText) {
+        document.querySelector("#main-menu-content").innerHTML = responseText;
+      },
+      false
+    );
+  });
+  //exponemos el objeto ds (d onde s ebas, por eso es ds) al global
+  global.$ds = ds;
+})(window);

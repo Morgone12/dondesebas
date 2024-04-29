@@ -252,6 +252,10 @@ img {
     font-size: 0.5em;
   }
 
+  .nav-link i {
+    margin-right: 5px;
+  }
+
   #specials-tile,
   #menu-tile,
   #map-tile {
@@ -331,11 +335,11 @@ img {
 /* Footer styles end*/
 
 /*Menu html styles*/
-#main-content > section {
+#main-menu-content > section {
   justify-content: center;
 }
 
-#main-content > h3 {
+#main-menu-content > h3 {
   padding: 15px;
   text-transform: uppercase;
   color: black;
@@ -353,7 +357,8 @@ img {
 }
 
 .menu-item-photo {
-  border-radius: 100%;
+  margin-top: 5px;
+  border-radius: 10%;
 }
 
 .menu-item-tile p {
