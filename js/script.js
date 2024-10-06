@@ -81,7 +81,7 @@ $(function () {
     $ajaxUtils.sendGetRequest(
       menuHtml,
       function (responseText) {
-        document.querySelector("#main-menu-content").innerHTML = responseText;
+        document.getElementById("main-menu-content").innerHTML = responseText;
       },
       false
     );

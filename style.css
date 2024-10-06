@@ -2,6 +2,10 @@ body {
   background-color: #ff6961;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +32,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .navbar-toggler {
@@ -51,7 +59,7 @@ img {
 }
 
 #logo-container {
-  width: 10%;
+  width: 6rem;
 }
 
 #logo-img {
@@ -71,7 +79,7 @@ img {
   font-family: "Lora", serif;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #222;
-  font-size: 1.5em;
+  font-size: 1rem;
   line-height: 0.75;
   font-weight: bold;
 }
@@ -85,19 +93,31 @@ img {
 
 .nav-list {
   justify-content: space-between;
-  gap: 5px;
+  margin-left: 1.5rem;
+  gap: 1.5rem;
 }
 
-.nav-list a {
-  color: cyan;
+.nav-item {
+  padding: 0.3em;
   text-align: center;
-  border: 1px solid cyan;
-  border-radius: 20px;
+  border-radius: 1.5rem;
+  font-size: 1.4rem;
 }
 
-.nav-list a:hover {
+.nav-item a {
+  color: cyan;
+}
+
+.nav-item.active, .nav-item.active a {
+  background-color: #e7e7e7; /* Cambia el fondo a blanco */
+  padding: 0.3em;
+  text-align: center;
+  border-radius: 1.5rem;
+  color: black;
+}
+
+.nav-list .nav-item:hover {
   background: #e7e7e7;
-  border-radius: 20px;
 }
 
 .nav-list span {
@@ -112,8 +132,8 @@ img {
 #main-content img {
   width: 100%;
   padding: 0;
-  margin: 10px 0;
-  border: 1px solid red;
+  margin: 9rem 0 3rem;
+  border: 1px solid cyan;
   border-radius: 5%;
 }
 /* END HEADER */
@@ -140,8 +160,7 @@ img {
   right: 0;
   width: 100%;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 1.6em;
+  font-size: 1.8rem;
   background-color: #000;
   color: #fff;
   opacity: 0.8;
@@ -150,7 +169,7 @@ img {
 #menu-tile:hover,
 #specials-tile:hover,
 #map-tile:hover {
-  box-shadow: 0 1px 5px 1px cyan;
+  box-shadow: 0 1px 5px 1px red;
 }
 
 #menu-tile {
@@ -172,19 +191,15 @@ img {
 /* Large devices only */
 @media (min-width: 1200px) {
   .navbar-brand h1 {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   .navbar-brand span {
     font-size: 0.8em;
   }
 
-  .nav-link .domicilios{
+  .nav-link .domicilios {
     width: 100px;
-  }
-  
-  .men, .info {
-    width: 55px;
   }
 }
 
@@ -198,11 +213,12 @@ img {
     font-size: 0.7em;
   }
 
-  .nav-link .domicilios{
+  .nav-link .domicilios {
     width: 100px;
   }
-  
-  .men, .info {
+
+  .men,
+  .info {
     width: 55px;
   }
 }
@@ -326,21 +342,89 @@ img {
 #testimonials > span,
 #address > span {
   color: rgba(238, 39, 39, 0.945);
-  font-size: 1.3em;
+  font-size: 1.8em;
 }
 
 #copyright {
   color: rgba(238, 39, 39, 0.945);
+  font-size: 1.5rem;
 }
 /* Footer styles end*/
 
 /*Menu html styles*/
+
+.cart-button {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.7rem;
+  color: cyan;
+}
+
+.cart-button-light {
+  background-color: cyan;
+  color: black;
+  padding: calc(1rem);
+  border-radius: 1.5rem;
+  right: 0.5rem;
+}
+
+.cart-container {
+  position: relative;
+}
+
+.cart-list {
+  background-color: #222;
+  width: 20rem;
+  height: 30rem;
+  max-height: 40rem;
+  position: absolute;
+  top: 4.5rem;
+  right: -1rem;
+  padding: 0;
+  border: 0.1rem cyan solid;
+  border-radius: 0.5rem;
+  color: cyan;
+  /* overflow-y: auto; */
+}
+
+.cart-list > h3 {
+  text-align: center;
+  width: 100%;
+  color: cyan;
+  margin: auto;
+  background-color: rgb(11, 25, 44);;
+}
+
+.cart-list::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra */
+}
+
+/* Estilo para el thumb (la parte que se arrastra) */
+.cart-list::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del thumb */
+  border-radius: 10px;     /* Bordes redondeados */
+}
+
+/* Estilo cuando se hace hover sobre el thumb */
+.cart-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cambiar el color cuando el cursor está sobre el thumb */
+}
+
+/* Estilo para la pista del scroll */
+.cart-list::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color del fondo de la pista */
+}
+
+.invisible-cart {
+  display: none;
+}
+
 #main-menu-content > section {
   justify-content: center;
 }
 
 #main-menu-content > h3 {
-  padding: 15px;
+  margin: 3rem;
   text-transform: uppercase;
   color: black;
   opacity: 0.9;
@@ -348,21 +432,23 @@ img {
 
 .menu-item-tile {
   position: relative;
-  background-color: cyan;
+  background-color: rgb(11, 25, 44);
   margin: 10px;
-  border-radius: 15px;
-  width: 250px;
+  color: rgb(245, 239, 255);
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 25rem;
   overflow: hidden;
-  max-height: 370px;
+  max-height: 37rem;
 }
 
 .menu-item-photo {
-  margin-top: 5px;
-  border-radius: 10%;
+  margin: 0.2rem 0 0.2rem 0;
+  border-radius: 0.5rem;
 }
 
 .menu-item-tile p {
-  padding: 10px;
+  padding: 0.5rem;
   text-align: center;
   font-style: italic;
   opacity: 0.8;
@@ -375,7 +461,6 @@ img {
 .menu-item-detail {
   font-style: italic;
   text-align: center;
-  padding-right: 10px;
 }
 
 .menu-item-detail p {
@@ -383,9 +468,7 @@ img {
 }
 
 .price {
-  color: green;
-  text-align: center;
-  margin-right: 10px;
+  color: #f9e400;
 }
 
 .menu-item-detail .menu-item-name {

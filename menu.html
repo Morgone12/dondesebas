@@ -23,7 +23,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top!important">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div id="header-nav" class="container-fluid">
           <a id="logo-container" href="index.html" class="d-none d-sm-block">
             <img id="logo-img" src="images/comida-rapida.png" alt="Logo" />
@@ -52,40 +52,43 @@
           </button>
 
           <div class="collapse navbar-collapse" id="collapsable-nav">
-            <ul class="navbar-nav ms-auto nav-list">
+            <ul class="navbar-nav nav-list">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">
-                  <i class="bi bi-house"></i
-                  ><br class="d-none d-sm-block" />Inicio
+                  <i class="bi bi-house"></i> Inicio
                 </a>
               </li>
-              <li class="nav-item men">
+              <li class="nav-item active">
                 <a class="nav-link" href="menu.html">
                   <i class="bi bi-egg-fried"></i>
-                  <br class="d-none d-sm-block" />Menu
-                </a>
-              </li>
-              <li class="nav-item domicilios">
-                <a class="nav-link" href="contactanos.html">
-                  <i class="bi bi-house-add-fill"></i
-                  ><br class="d-none d-sm-block" />Domicilio
+                  Menú
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link info" href="acercade.html">
-                  <i class="bi bi-info-circle"></i
-                  ><br class="d-none d-sm-block" />Info
+                <a class="nav-link domicilios" href="contactanos.html">
+                  <i class="bi bi-house-add-fill"></i>Domicilio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="acercade.html">
+                  <i class="bi bi-info-circle"></i>Info
                 </a>
               </li>
             </ul>
+            <div id="cart-button" class="cart-button">
+              <div class="cart-container">
+                <a href="#" class="nav-link"><i class="bi bi-cart"></i></a>
+                <ul id="cart-list" class="cart-list invisible-cart overflow-auto">
+                  <h3>Tus agregados al carrito:</h3>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
     </header>
 
-    <div id="main-menu-content" class="container-fluid">
-      
-    </div>
+    <div id="main-menu-content" class="container-fluid"></div>
     <!--  End of #main-content -->
 
     <footer class="panel-footer">
@@ -125,5 +128,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>
