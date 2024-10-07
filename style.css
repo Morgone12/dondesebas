@@ -374,8 +374,9 @@ img {
 
 .cart-list {
   background-color: #222;
-  width: 20rem;
-  height: 30rem;
+  width: 30rem;
+  height: auto;
+  max-height: 30rem;
   max-height: 40rem;
   position: absolute;
   top: 4.5rem;
@@ -393,6 +394,69 @@ img {
   color: cyan;
   margin: auto;
   background-color: rgb(11, 25, 44);;
+}
+
+#temporal-advise {
+  color: white;
+  opacity: 0.6;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.cart-item {
+  position: relative;
+  margin: 1rem auto 1rem 0.5rem;
+  font-size: 1.5rem;
+}
+
+.cart-item-img {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.item-count {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: #f9e400;
+}
+
+.cart-delete-button, .cart-minus-button, .cart-plus-button {
+  color: white;
+  height: 1.5rem;
+  font-size: 1rem;
+  background-color: #61122f;
+  padding: 0.2rem 0.5rem;
+  margin: 0 auto;
+  align-self: center;
+  border: 0.01rem solid white;
+  border-radius: 0.5rem;
+}
+
+.cart-delete-button:hover , .cart-minus-button:hover, .cart-plus-button:hover {
+  cursor: pointer;
+}
+
+.cart-delete-button {
+  margin-left: 0.5rem;
+}
+
+.cart-minus-button, .cart-plus-button {
+  font-size: 1.5rem;
+  padding: 0rem 0.5rem;
+  height: 0.5rem;
+}
+
+.cart-minus-button {
+  margin-left: 3rem;
+}
+
+.cart-plus-button {
+  margin-right: 0.5rem;
 }
 
 .cart-list::-webkit-scrollbar {
@@ -452,6 +516,7 @@ img {
   text-align: center;
   font-style: italic;
   opacity: 0.8;
+  font-size: 1.1rem;
 }
 
 .menu-item-tile h3 {

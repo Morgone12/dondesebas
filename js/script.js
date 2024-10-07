@@ -9,19 +9,6 @@ let Persona = {
   hobby: "tocar guitarra",
 };
 
-console.log(document.getElementById("copyright"));
-
-function mostrar(event) {
-  let mensaje = "";
-  let precio = event.target
-    .closest(".menu-item-tile")
-    .querySelector(".price").textContent;
-  precio += "00";
-  mensaje = "El precio subio a: " + precio + "!";
-
-  event.target.closest(".menu-item-tile").querySelector(".price").innerHTML =
-    mensaje;
-}
 
 document.querySelectorAll(".menu-item-tile button").forEach((boton) => {
   boton.addEventListener("click", mostrar);
@@ -82,6 +69,7 @@ $(function () {
       menuHtml,
       function (responseText) {
         document.getElementById("main-menu-content").innerHTML = responseText;
+        mapMenuItems();
       },
       false
     );
