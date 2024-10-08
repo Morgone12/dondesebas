@@ -23,7 +23,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top">
         <div id="header-nav" class="container-fluid">
           <a id="logo-container" href="index.html" class="d-none d-sm-block">
             <img id="logo-img" src="images/comida-rapida.png" alt="Logo" />
@@ -34,7 +34,7 @@
               <a href="index.html"
                 ><h1>Donde Sebas</h1>
                 <i class="bi bi-fire"></i>
-                <span>Restaurante De Comidas Rápidas</span>
+                <span>Fast Food</span>
               </a>
             </div>
           </a>
@@ -50,6 +50,16 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <div id="cart-button" class="cart-button">
+            <div class="cart-container">
+              <a href="#" class="nav-link"><i class="bi bi-cart"></i></a>
+              <ul id="cart-list" class="cart-list invisible-cart overflow-auto">
+                <h3>Tus agregados al carrito:</h3>
+                <p id="temporal-advise">Aún no has agregado nada al carrito</p>
+              </ul>
+            </div>
+          </div>
 
           <div class="collapse navbar-collapse" id="collapsable-nav">
             <ul class="navbar-nav nav-list">
@@ -75,15 +85,6 @@
                 </a>
               </li>
             </ul>
-            <div id="cart-button" class="cart-button">
-              <div class="cart-container">
-                <a href="#" class="nav-link"><i class="bi bi-cart"></i></a>
-                <ul id="cart-list" class="cart-list invisible-cart overflow-auto">
-                  <h3>Tus agregados al carrito:</h3>
-                  <p id="temporal-advise">Aun no has agregado nada al carrito<p>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </nav>

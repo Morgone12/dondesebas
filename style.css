@@ -136,228 +136,13 @@ img {
   border: 1px solid cyan;
   border-radius: 5%;
 }
-/* END HEADER */
-
-/* Home-tiles */
-
-#menu-tile,
-#specials-tile,
-#map-tile {
-  height: 250px;
-  width: 100%;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  position: relative;
-  border: 2px solid #3f0c1f;
-  overflow: hidden;
-}
-
-#menu-tile span,
-#specials-tile span,
-#map-tile span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.8rem;
-  background-color: #000;
-  color: #fff;
-  opacity: 0.8;
-}
-
-#menu-tile:hover,
-#specials-tile:hover,
-#map-tile:hover {
-  box-shadow: 0 1px 5px 1px red;
-}
-
-#menu-tile {
-  background-image: url(images/menu-tiles.jpg.jpg);
-  background-position: center;
-}
-
-#menu-tile,
-#specials-tile,
-#map-tile {
-  border-radius: 10%;
-}
-
-#specials-tile {
-  background-image: url(images/specials-tiles-jpg.avif);
-  background-position: center;
-}
-
-/* Large devices only */
-@media (min-width: 1200px) {
-  .navbar-brand h1 {
-    font-size: 2vw;
-  }
-
-  .navbar-brand span {
-    font-size: 0.8em;
-  }
-
-  .nav-link .domicilios {
-    width: 100px;
-  }
-}
-
-/* Medium devices only */
-@media (min-width: 992px) and (max-width: 1200px) {
-  .navbar-brand h1 {
-    font-size: 3vw;
-  }
-
-  .navbar-brand span {
-    font-size: 0.7em;
-  }
-
-  .nav-link .domicilios {
-    width: 100px;
-  }
-
-  .men,
-  .info {
-    width: 55px;
-  }
-}
-
-/* Small devices only */
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar-brand {
-    margin-top: 10px;
-  }
-
-  .navbar-brand h1 {
-    font-size: 3vw;
-  }
-
-  .navbar-brand span {
-    font-size: 0.5em;
-  }
-}
-
-/* Extra small devices only */
-@media (max-width: 767px) {
-  .navbar-brand {
-    margin-top: 10px;
-  }
-
-  .navbar-brand h1 {
-    font-size: 3vw;
-  }
-
-  .navbar-brand span {
-    font-size: 0.5em;
-  }
-
-  .container-lg .jumbotron {
-    margin-top: 5px;
-    padding: 0;
-  }
-}
-
-/*Extra extra small devices */
-@media (max-width: 575px) {
-  .navbar-brand h1 {
-    font-size: 4vw;
-  }
-
-  .navbar-brand span {
-    font-size: 0.5em;
-  }
-
-  .nav-link i {
-    margin-right: 5px;
-  }
-
-  #specials-tile,
-  #menu-tile,
-  #map-tile {
-    width: 340px;
-    margin: 0 auto 15px auto;
-  }
-
-  .panel-footer section {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .panel-footer section hr {
-    justify-content: center;
-  }
-}
-
-/*Extra extra small devices */
-@media (max-width: 478px) {
-  .navbar-brand h1 {
-    font-size: 4vw;
-  }
-
-  .navbar-brand span {
-    font-size: 0.4em;
-  }
-
-  #specials-tile,
-  #menu-tile,
-  #map-tile {
-    width: 280px;
-    margin: 0 auto 15px auto;
-  }
-}
-/* End of media */
-
-/* Footer styles*/
-.panel-footer {
-  margin-top: 30px;
-  padding-top: 35px;
-  padding-bottom: 30px;
-  background-color: #222;
-  border-top: 0;
-}
-
-.panel-footer section {
-  color: cyan;
-}
-
-.panel-footer div.row {
-  margin-bottom: 35px;
-}
-
-#hours,
-#address {
-  line-height: 2;
-}
-
-#testimonials {
-  font-style: italic;
-}
-
-#testimonials p {
-  margin-top: 10px;
-}
-
-#hours > span,
-#testimonials > span,
-#address > span {
-  color: rgba(238, 39, 39, 0.945);
-  font-size: 1.8em;
-}
-
-#copyright {
-  color: rgba(238, 39, 39, 0.945);
-  font-size: 1.5rem;
-}
-/* Footer styles end*/
-
-/*Menu html styles*/
 
 .cart-button {
   position: absolute;
-  right: 1.5rem;
+  right: 2rem;
   font-size: 1.7rem;
   color: cyan;
+  z-index: 1050;
 }
 
 .cart-button-light {
@@ -365,8 +150,9 @@ img {
   color: black;
   padding: calc(1rem);
   border-radius: 1.5rem;
-  right: 0.5rem;
+  right: 1rem;
 }
+
 
 .cart-container {
   position: relative;
@@ -466,6 +252,250 @@ img {
 .invisible-cart {
   display: none;
 }
+/* END HEADER */
+
+/* Home-tiles */
+
+#menu-tile,
+#specials-tile,
+#map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+}
+
+#menu-tile span,
+#specials-tile span,
+#map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.8;
+}
+
+#menu-tile:hover,
+#specials-tile:hover,
+#map-tile:hover {
+  box-shadow: 0 1px 5px 1px red;
+}
+
+#menu-tile {
+  background-image: url(images/menu-tiles.jpg.jpg);
+  background-position: center;
+}
+
+#menu-tile,
+#specials-tile,
+#map-tile {
+  border-radius: 10%;
+}
+
+#specials-tile {
+  background-image: url(images/specials-tiles-jpg.avif);
+  background-position: center;
+}
+
+/* Large devices only */
+@media (min-width: 1200px) {
+  .navbar-brand h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-brand span {
+    font-size: 0.8em;
+  }
+
+  .nav-link .domicilios {
+    width: 100px;
+  }
+  
+  .menu-item-tile h5{
+    font-size: 1.6rem;
+  }
+
+  .menu-item-tile p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices only */
+@media (min-width: 992px) and (max-width: 1200px) {
+  
+  .navbar-brand h1 {
+    font-size: 3vw;
+  }
+
+  .navbar-brand span {
+    font-size: 0.7em;
+  }
+
+  #testimonials > span, #address > span{
+    font-size: 1.2rem;
+  }
+
+  #testimonials, #address p {
+    font-size: 1.3rem;
+  }
+
+  #hours  {
+    font-size: 1.2rem;
+  }
+
+  #hours > span {
+    font-size: 1.2rem;
+  }
+  
+}
+
+/* Small devices only */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .navbar-brand {
+    margin-top: 1rem;
+  }
+
+  .navbar-brand h1 {
+    font-size: 2.3rem;
+  }
+
+  .navbar-brand span {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices only */
+@media (max-width: 767px) {
+  .navbar-brand {
+    margin-top: 10px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 3vw;
+  }
+
+  .navbar-brand span {
+    font-size: 1rem;
+  }
+
+  .container-lg .jumbotron {
+    margin-top: 5px;
+    padding: 0;
+  }
+
+  .cart-button {
+    right: 6rem;
+  }
+
+  .cart-button-light {
+    right: 7rem;
+  }
+}
+
+/*Extra extra small devices */
+@media (max-width: 575px) {
+
+  .navbar-brand h1 {
+    font-size: 4vw;
+  }
+
+  .navbar-brand span {
+    font-size: 0.5em;
+  }
+
+  .nav-link i {
+    margin-right: 5px;
+  }
+
+  #specials-tile,
+  #menu-tile,
+  #map-tile {
+    width: 340px;
+    margin: 0 auto 15px auto;
+  }
+
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .panel-footer section hr {
+    justify-content: center;
+  }
+}
+
+/*Extra extra small devices */
+@media (max-width: 478px) {
+  .navbar-brand h1 {
+    font-size: 4vw;
+  }
+
+  .navbar-brand span {
+    font-size: 0.4em;
+  }
+
+  #specials-tile,
+  #menu-tile,
+  #map-tile {
+    width: 280px;
+    margin: 0 auto 15px auto;
+  }
+}
+/* End of media */
+
+/* Footer styles*/
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+}
+
+.panel-footer section {
+  color: cyan;
+}
+
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+
+#hours,
+#address {
+  line-height: 2;
+}
+
+#testimonials {
+  font-style: italic;
+}
+
+#testimonials p {
+  margin-top: 10px;
+}
+
+#hours > span,
+#testimonials > span,
+#address > span {
+  color: rgba(238, 39, 39, 0.945);
+  font-size: 1.8rem;
+}
+
+#copyright {
+  color: rgba(238, 39, 39, 0.945);
+  font-size: 1.5rem;
+}
+/* Footer styles end*/
+
+/*Menu html styles*/
+
 
 #main-menu-content > section {
   justify-content: center;
@@ -518,6 +548,7 @@ img {
 
 .price {
   color: #f9e400;
+  font-size: 1rem;
 }
 
 .menu-item-detail .menu-item-name {

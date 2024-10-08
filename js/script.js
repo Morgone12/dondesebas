@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 $(function () {
   $(".navbar-toggler").on("focusout", function () {
     let screenWidth = window.innerWidth;
-    if (screenWidth < 992) {
+    if (screenWidth < 767) {
       $(".navbar-collapse").collapse("hide");
     }
   });

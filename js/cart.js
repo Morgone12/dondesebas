@@ -165,7 +165,6 @@ function increaseCartListItem(item) {
   itemCounter.textContent = counter + 1;
 
   updateCartToLocalStorage();
-  console.log(cartListItems);
 }
 
 function saveCartToLocalStorage(item) {
